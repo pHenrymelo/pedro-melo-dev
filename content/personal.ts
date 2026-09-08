@@ -13,7 +13,7 @@ export const personal = {
     headlineAccent: "produto",
     headlineAfter: ": da arquitetura ao deploy, passando pelo time que faz acontecer.",
     subtitle:
-      "Tenho 5 anos desenvolvendo software e hoje atuo como Tech Lead no GREat, focado em arquitetura, qualidade de código e times que entregam.",
+      "Tenho 6 anos desenvolvendo software e hoje atuo como Tech Lead no GREat, focado em arquitetura, qualidade de código e times que entregam.",
     meta: [
       { text: "Disponível para conversas" },
       { icon: "map-pin", text: "Itapajé, CE · Brasil" },
@@ -33,7 +33,7 @@ export const personal = {
         { kind: "output", text: "{" },
         { kind: "output", text: '  "role": "Tech Lead @ GREat",' },
         { kind: "output", text: '  "focus": ["arquitetura", "times", "qualidade"],' },
-        { kind: "output", text: '  "years": 5,' },
+        { kind: "output", text: '  "years": 6,' },
         { kind: "output", text: '  "stack": "TS · Python · Ruby",' },
         { kind: "output", text: '  "status": "shipping"' },
         { kind: "output", text: "}" },
@@ -47,13 +47,13 @@ export const personal = {
     heading: {
       id: "sobre",
       eyebrow: "Sobre",
-      title: "Engenheiro com cinco anos de prática em produção, em time e em escala.",
+      title: "Engenheiro com seis anos de prática em produção, em time e em escala.",
     },
     paragraphs: [
       [
-        "Me chamo Pedro Henrique, sou engenheiro de software com 5 anos de experiência e estou cursando Análise e Desenvolvimento de Sistemas na ",
+        "Me chamo Pedro Henrique, sou engenheiro de software com 6 anos de experiência e me formei em Análise e Desenvolvimento de Sistemas pela ",
         { text: "UFC", strong: true },
-        ".",
+        ", com distinção acadêmica (Summa Cum Laude).",
       ],
       [
         "Atuo como Tech Lead no ",
@@ -76,12 +76,8 @@ export const personal = {
     ],
     sidebar: {
       title: "Onde me encontrar",
-      rows: [
-        { icon: "github", label: "github", value: "pHenrymelo", href: "https://github.com/pHenrymelo" },
-        { icon: "linkedin", label: "linkedin", value: "/in/phenrymelo", href: "https://www.linkedin.com/in/phenrymelo" },
-        { icon: "mail", label: "email", value: "pedrohenriquebmelo25@gmail.com", href: "mailto:pedrohenriquebmelo25@gmail.com" },
-        { icon: "map-pin", label: "local", value: "Itapajé, CE — Brasil" },
-      ],
+      description: "GitHub, LinkedIn, email e telefone estão reunidos na seção de contato.",
+      cta: { label: "Ver contato", href: "#contato" },
     },
   },
 
@@ -235,7 +231,9 @@ export const personal = {
         {
           title: "Análise e Desenvolvimento de Sistemas",
           org: "Universidade Federal do Ceará — UFC",
-          date: "Mar 2023 — Presente",
+          date: "Mar 2023 — Abr 2026",
+          honors: "Summa Cum Laude",
+          diplomaHref: "/diploma-pedro-melo.jpg",
         },
       ],
     },
@@ -281,7 +279,7 @@ export const personal = {
     ],
     form: {
       hint: "Apenas para conversas. Sem spam.",
-      successMessage: "Mensagem enviada — respondo em breve.",
+      successMessage: "Mensagem enviada. Respondo em breve.",
       fallbackHref: "mailto:pedrohenriquebmelo25@gmail.com",
     },
   },

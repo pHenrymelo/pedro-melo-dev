@@ -7,7 +7,7 @@ export const contactSchema = z.object({
     .string()
     .trim()
     .min(10, "Conte um pouco mais — pelo menos 10 caracteres.")
-    .max(5000, "Mensagem muito longa."),
+    .max(1500, "Mensagem muito longa."),
 });
 
 export type ContactInput = z.infer<typeof contactSchema>;

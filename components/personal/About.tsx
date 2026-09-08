@@ -1,4 +1,5 @@
-import { Icon } from "@/components/ui/Icon";
+import { ArrowDown } from "lucide-react";
+import { LinkButton } from "@/components/ui/Button";
 import { Container, Rich, SectionHead } from "@/components/ui/primitives";
 import { Reveal } from "@/components/ui/Reveal";
 import type { PersonalContent } from "@/content/types";
@@ -29,32 +30,11 @@ export function About({ about }: { about: PersonalContent["about"] }) {
               <h6 className="font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-fg-4">
                 {about.sidebar.title}
               </h6>
-              <div className="flex flex-col">
-                {about.sidebar.rows.map((row) => (
-                  <div
-                    key={row.label}
-                    className="flex items-center gap-3 border-t border-line-soft py-2.5 text-sm text-fg-2 first:border-t-0 first:pt-0"
-                  >
-                    <Icon name={row.icon} className="size-4 shrink-0 text-purple-400" />
-                    <span className="w-[72px] shrink-0 font-mono text-[11px] uppercase tracking-[0.04em] text-fg-4">
-                      {row.label}
-                    </span>
-                    {row.href ? (
-                      <a
-                        href={row.href}
-                        {...(row.href.startsWith("http")
-                          ? { target: "_blank", rel: "noopener noreferrer" }
-                          : {})}
-                        className="min-w-0 truncate text-fg-1 no-underline transition-colors duration-200 ease-out hover:text-purple-300 hover:no-underline"
-                      >
-                        {row.value}
-                      </a>
-                    ) : (
-                      <span className="min-w-0 truncate text-fg-1">{row.value}</span>
-                    )}
-                  </div>
-                ))}
-              </div>
+              <p className="text-sm text-fg-3">{about.sidebar.description}</p>
+              <LinkButton href={about.sidebar.cta.href} variant="ghost" className="self-start">
+                {about.sidebar.cta.label}
+                <ArrowDown className="size-4" aria-hidden />
+              </LinkButton>
             </div>
           </Reveal>
         </div>

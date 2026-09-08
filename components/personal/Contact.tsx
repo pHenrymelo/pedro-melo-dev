@@ -17,10 +17,9 @@ export function Contact({ contact }: { contact: PersonalContent["contact"] }) {
           <SectionHead heading={contact.heading} />
         </Reveal>
 
-        <div className="grid items-start gap-6 lg:grid-cols-2">
-          <Reveal>
-
-            <div className="grid gap-0.5 rounded-xl border border-line-soft bg-surface p-2">
+        <div className="grid items-stretch gap-6 lg:grid-cols-2">
+          <Reveal className="h-full">
+            <div className="grid h-full auto-rows-min gap-0.5 rounded-xl border border-line-soft bg-surface p-2">
               {contact.channels.map((channel) => {
                 const inner = (
                   <>
@@ -62,7 +61,7 @@ export function Contact({ contact }: { contact: PersonalContent["contact"] }) {
             </div>
           </Reveal>
 
-          <Reveal delay={100}>
+          <Reveal delay={100} className="h-full">
             <ContactForm form={contact.form} />
           </Reveal>
         </div>

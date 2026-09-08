@@ -68,6 +68,9 @@ tipografia base.
 Currículo: coloque o PDF em `public/cv-pedro-melo.pdf`. O botão "Download CV" aparece sozinho
 quando o arquivo existe e some quando não existe, para não deixar link quebrado.
 
+Diploma: coloque a imagem em `public/diploma-pedro-melo.jpg`. O link "Ver diploma" no card de
+formação segue a mesma regra: só aparece quando o arquivo existe.
+
 ## Deploy
 
 Vercel, sem configuração extra. O framework é detectado sozinho. Cadastre `RESEND_API_KEY` (e

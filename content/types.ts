@@ -55,13 +55,6 @@ export interface ContactChannel {
   readonly href?: string;
 }
 
-export interface InfoRow {
-  readonly icon: IconName;
-  readonly label: string;
-  readonly value: string;
-  readonly href?: string;
-}
-
 export interface StackGroup {
   readonly label: string;
   readonly hint: string;
@@ -94,6 +87,8 @@ export interface Education {
   readonly title: string;
   readonly org: string;
   readonly date: string;
+  readonly honors?: string;
+  readonly diplomaHref?: string;
 }
 
 export interface Certification {
@@ -133,7 +128,7 @@ export interface PersonalContent {
   readonly about: {
     readonly heading: SectionHeading;
     readonly paragraphs: readonly RichText[];
-    readonly sidebar: { readonly title: string; readonly rows: readonly InfoRow[] };
+    readonly sidebar: { readonly title: string; readonly description: string; readonly cta: Link };
   };
   readonly stack: {
     readonly heading: SectionHeading;

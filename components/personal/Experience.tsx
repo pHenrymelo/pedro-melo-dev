@@ -1,10 +1,16 @@
-import { GraduationCap } from "lucide-react";
+import { ExternalLink, GraduationCap } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { Container, SectionHead } from "@/components/ui/primitives";
 import { Reveal } from "@/components/ui/Reveal";
 import type { PersonalContent } from "@/content/types";
 
-export function Experience({ experience }: { experience: PersonalContent["experience"] }) {
+export function Experience({
+  experience,
+  diplomaDisponivel,
+}: {
+  experience: PersonalContent["experience"];
+  diplomaDisponivel: boolean;
+}) {
   return (
     <section
       id={experience.heading.id}
@@ -67,6 +73,22 @@ export function Experience({ experience }: { experience: PersonalContent["experi
                     <div className="text-base font-bold text-fg-1">{item.title}</div>
                     <div className="text-sm text-fg-3">{item.org}</div>
                     <div className="font-mono text-xs text-fg-4">{item.date}</div>
+                    {item.honors ? (
+                      <span className="mt-1 inline-flex w-fit items-center rounded-sm border border-purple-500/20 bg-brand-subtle px-2 py-[3px] font-mono text-[10px] text-purple-200">
+                        {item.honors}
+                      </span>
+                    ) : null}
+                    {item.diplomaHref && diplomaDisponivel ? (
+                      <a
+                        href={item.diplomaHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-1 inline-flex w-fit items-center gap-1 font-mono text-xs text-fg-4 no-underline transition-colors duration-200 ease-out hover:text-purple-300 hover:no-underline"
+                      >
+                        <ExternalLink className="size-3.5" aria-hidden />
+                        Ver diploma
+                      </a>
+                    ) : null}
                   </div>
                 </div>
               ))}

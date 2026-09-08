@@ -26,6 +26,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
 
   const cvDisponivel = existsSync(join(process.cwd(), "public", "cv-pedro-melo.pdf"));
+  const diplomaDisponivel = existsSync(join(process.cwd(), "public", "diploma-pedro-melo.jpg"));
 
   return (
     <main id="top">
@@ -33,7 +34,7 @@ export default function HomePage() {
       <About about={personal.about} />
       <Stack stack={personal.stack} />
       <Projects projects={personal.projects} />
-      <Experience experience={personal.experience} />
+      <Experience experience={personal.experience} diplomaDisponivel={diplomaDisponivel} />
       <Certifications certifications={personal.certifications} />
       <KaiserTeaser teaser={personal.kaiserTeaser} />
       <Contact contact={personal.contact} />

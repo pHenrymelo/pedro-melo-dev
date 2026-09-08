@@ -71,7 +71,7 @@ export function ContactForm({ form }: { form: PersonalContent["contact"]["form"]
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="grid gap-4 rounded-xl border border-line-soft bg-surface p-6"
+      className="grid h-full auto-rows-min gap-4 rounded-xl border border-line-soft bg-surface p-6"
     >
       <div className="grid gap-2">
         <label htmlFor={nameId} className={labelClass}>
@@ -100,9 +100,9 @@ export function ContactForm({ form }: { form: PersonalContent["contact"]["form"]
         <textarea
           id={messageId}
           name="message"
-          rows={5}
+          maxLength={1500}
           placeholder="Conte rapidamente sobre o projeto ou oportunidade…"
-          className={`${fieldClass} min-h-[120px] resize-y leading-relaxed`}
+          className={`${fieldClass} h-[120px] resize-none overflow-y-auto leading-relaxed`}
         />
       </div>
 

@@ -27,7 +27,9 @@ export function Certifications({
                   <Icon name={cert.icon} className="size-[18px] text-purple-300" />
                 </div>
                 <div className="flex flex-col gap-1">
-                  <div className="text-base font-bold leading-snug text-fg-1">{cert.title}</div>
+                  <div className="flex min-h-11 items-center text-base font-bold leading-snug text-fg-1">
+                    {cert.title}
+                  </div>
                   <div className="font-mono text-xs text-fg-4">{cert.org}</div>
                 </div>
               </div>
