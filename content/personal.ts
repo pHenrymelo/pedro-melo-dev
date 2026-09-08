@@ -4,18 +4,18 @@ export const personal = {
   meta: {
     title: "Pedro Melo — Software Engineer & Tech Lead",
     description:
-      "Pedro Henrique Braga Melo — Engenheiro de software e Tech Lead. Arquitetura, qualidade e times de entrega.",
+      "Pedro Henrique Braga Melo, engenheiro de software e Tech Lead, com foco em arquitetura de sistemas, qualidade de código e liderança técnica.",
   },
 
   hero: {
     eyebrow: "Software Engineer & Tech Lead",
     headlineBefore: "Engenharia de software com foco em ",
     headlineAccent: "produto",
-    headlineAfter: ": da arquitetura ao deploy, passando pelo time que faz acontecer.",
+    headlineAfter: ": da arquitetura ao deploy, incluindo o time responsável pela entrega.",
     subtitle:
-      "Tenho 6 anos desenvolvendo software e hoje atuo como Tech Lead no GREat, focado em arquitetura, qualidade de código e times que entregam.",
+      "Trabalho com desenvolvimento de software há 6 anos e atuo como Tech Lead no GREat, com foco em arquitetura, qualidade de código e na condução do time de desenvolvimento.",
     meta: [
-      { text: "Disponível para conversas" },
+      { text: "Aberto a novas oportunidades" },
       { icon: "map-pin", text: "Itapajé, CE · Brasil" },
       { icon: "languages", text: "PT nativo · EN proficiente" },
     ],
@@ -47,13 +47,13 @@ export const personal = {
     heading: {
       id: "sobre",
       eyebrow: "Sobre",
-      title: "Engenheiro com seis anos de prática em produção, em time e em escala.",
+      title: "Engenheiro de software com seis anos de experiência em ambientes de produção e trabalho em time.",
     },
     paragraphs: [
       [
-        "Me chamo Pedro Henrique, sou engenheiro de software com 6 anos de experiência e me formei em Análise e Desenvolvimento de Sistemas pela ",
+        "Sou Pedro Henrique, engenheiro de software com 6 anos de experiência, formado em Análise e Desenvolvimento de Sistemas pela ",
         { text: "UFC", strong: true },
-        ", com distinção acadêmica (Summa Cum Laude).",
+        " com distinção acadêmica (Summa Cum Laude).",
       ],
       [
         "Atuo como Tech Lead no ",
@@ -71,7 +71,7 @@ export const personal = {
         { text: "Python", strong: true },
         " e ",
         { text: "Ruby", strong: true },
-        ", e me viro bem em inglês.",
+        ", e tenho proficiência em inglês em contextos profissionais.",
       ],
     ],
     sidebar: {
@@ -143,15 +143,15 @@ export const personal = {
     heading: {
       id: "projetos",
       eyebrow: "Projetos",
-      title: "Trabalhos com impacto profissional e acadêmico.",
+      title: "Trabalhos profissionais e acadêmicos.",
     },
     items: [
       {
         mark: "G.",
         eyebrow: "Profissional · Tech Lead",
-        title: "Plataforma GREat e Parceira Multinacional",
+        title: "Laboratório GREat e Parceira Multinacional",
         description:
-          "Atuo como tech lead em um projeto do GREat com uma multinacional. Cuido da arquitetura, das decisões de stack, faço code review e ajudo o time a entregar.",
+          "Atuo como tech lead em um projeto do GREat em parceiria com uma multinacional. Sou responsável pela arquitetura e decisões tecnicas, conduzo os code reviews e apoio o time nas entregas de um projeto interno da empresa.",
         tags: [{ label: "Stack sob NDA", nda: true }],
       },
       {
@@ -159,18 +159,16 @@ export const personal = {
         eyebrow: "Acadêmico · UFC / PAIP",
         title: "Alumonitor",
         description:
-          "Plataforma da UFC para monitorar dados socioeconômicos e prever evasão acadêmica. Refatorei a infra para microserviços com Flask, integrei modelos de IA e entreguei web e mobile.",
+          "Plataforma da UFC para monitorar dados socioeconômicos e prever evasão acadêmica. Refatorei a infraestrutura para microserviços com Flask, integrei modelos de IA e entreguei as versões web e mobile.",
         tags: [{ label: "Python" }, { label: "Flask" }, { label: "React" }, { label: "RN" }, { label: "Docker" }],
-        repo: { label: "repo", href: "https://github.com/pHenrymelo" },
       },
       {
         mark: "H.",
         eyebrow: "Acadêmico · Huawei",
         title: "MVP com a Huawei: Monitoramento de Queimadas",
         description:
-          "MVP em parceria com a Huawei para monitorar grilagem e queimadas usando visão computacional e drones autônomos.",
+          "MVP em parceria com a Huawei para monitorar grilagem e queimadas usando visão computacional com imagens de satélite.",
         tags: [{ label: "Python" }, { label: "React" }, { label: "Computer Vision" }],
-        repo: { label: "repo", href: "https://github.com/pHenrymelo" },
       },
     ],
   },
@@ -187,7 +185,7 @@ export const personal = {
         title: "Tech Lead",
         org: "GREat",
         description:
-          "Liderança técnica de projeto em parceria com multinacional. Arquitetura de sistema, decisões de stack, code review e orientação do time de desenvolvimento.",
+          "Liderança técnica de projeto em parceria com multinacional. Arquitetura de sistema, decisões de stack, code reviews e orientação do time de desenvolvimento.",
         tags: ["Arquitetura", "Liderança", "NDA"],
         current: true,
       },
@@ -220,7 +218,7 @@ export const personal = {
         title: "Projetos pessoais",
         org: "KaiserInc",
         description:
-          "Coordenação de projetos colaborativos com colegas, desenvolvimento de produtos próprios e exploração de novas tecnologias em contextos reais.",
+          "Coordenação de projetos colaborativos com colegas e desenvolvimento de produtos próprios, aplicando novas tecnologias em projetos reais.",
         tags: ["Liderança", "Produto"],
         current: true,
       },
@@ -255,9 +253,9 @@ export const personal = {
   kaiserTeaser: {
     id: "kaiserinc",
     eyebrow: "KaiserInc",
-    title: "Knowledge & Tech — projetos colaborativos, fora do horário de expediente.",
+    title: "Knowledge & Tech: projetos colaborativos desenvolvidos fora do expediente.",
     description:
-      "KaiserInc é meu grupo pessoal de projetos — onde coordeno iniciativas colaborativas com colegas, desenvolvo produtos próprios e aplico novas tecnologias em contextos reais.",
+      "A KaiserInc é meu grupo pessoal de projetos, no qual coordeno iniciativas colaborativas com colegas e desenvolvo produtos próprios com novas tecnologias.",
     primaryCta: { label: "Conheça a KaiserInc", href: "/kaiserinc" },
     secondaryCta: { label: "Ver projetos pessoais aqui", href: "#projetos" },
   },
@@ -266,7 +264,7 @@ export const personal = {
     heading: {
       id: "contato",
       eyebrow: "Contato",
-      title: "Vamos conversar.",
+      title: "Entre em contato.",
       description:
         "Aberto a oportunidades em arquitetura, liderança técnica e produto. Resposta normalmente em até 48h.",
     },
@@ -278,7 +276,7 @@ export const personal = {
       { icon: "map-pin", label: "Localização", value: "Itapajé, Ceará — Brasil" },
     ],
     form: {
-      hint: "Apenas para conversas. Sem spam.",
+      hint: "Apenas para contato profissional.",
       successMessage: "Mensagem enviada. Respondo em breve.",
       fallbackHref: "mailto:pedrohenriquebmelo25@gmail.com",
     },

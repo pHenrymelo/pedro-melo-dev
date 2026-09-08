@@ -194,7 +194,7 @@ export interface KaiserProject {
   readonly title: string;
   readonly description: string;
   readonly tags: readonly string[];
-  readonly repo: Link;
+  readonly repo?: Link;
 }
 
 export interface KaiserContent {

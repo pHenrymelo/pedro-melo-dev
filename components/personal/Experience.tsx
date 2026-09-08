@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ExternalLink, GraduationCap } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { Container, SectionHead } from "@/components/ui/primitives";
@@ -65,31 +66,45 @@ export function Experience({
                 {experience.education.title}
               </h6>
               {experience.education.items.map((item) => (
-                <div key={item.title} className="flex gap-4">
-                  <div className="grid size-9 shrink-0 place-items-center rounded-md border border-line-soft bg-elevated">
-                    <GraduationCap className="size-[18px] text-purple-300" aria-hidden />
+                <div key={item.title}>
+                  <div className="flex gap-4">
+                    <div className="grid size-9 shrink-0 place-items-center rounded-md border border-line-soft bg-elevated">
+                      <GraduationCap className="size-[18px] text-purple-300" aria-hidden />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <div className="text-base font-bold text-fg-1">{item.title}</div>
+                      <div className="text-sm text-fg-3">{item.org}</div>
+                      <div className="font-mono text-xs text-fg-4">{item.date}</div>
+                      {item.honors ? (
+                        <span className="mt-1 inline-flex w-fit items-center rounded-sm border border-purple-500/20 bg-brand-subtle px-2 py-[3px] font-mono text-[10px] text-purple-200">
+                          {item.honors}
+                        </span>
+                      ) : null}
+                    </div>
                   </div>
-                  <div className="flex flex-col gap-1">
-                    <div className="text-base font-bold text-fg-1">{item.title}</div>
-                    <div className="text-sm text-fg-3">{item.org}</div>
-                    <div className="font-mono text-xs text-fg-4">{item.date}</div>
-                    {item.honors ? (
-                      <span className="mt-1 inline-flex w-fit items-center rounded-sm border border-purple-500/20 bg-brand-subtle px-2 py-[3px] font-mono text-[10px] text-purple-200">
-                        {item.honors}
+
+                  {item.diplomaHref && diplomaDisponivel ? (
+                    <a
+                      href={item.diplomaHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group mt-4 block rounded-lg border border-line-soft bg-canvas p-2 shadow-sm transition-colors duration-200 ease-out hover:border-line-strong"
+                    >
+                      <div className="relative aspect-[7/5] w-full overflow-hidden rounded-md bg-elevated">
+                        <Image
+                          src={item.diplomaHref}
+                          alt={`Diploma — ${item.title}`}
+                          fill
+                          sizes="(min-width: 60rem) 360px, 90vw"
+                          className="object-contain"
+                        />
+                      </div>
+                      <span className="mt-2 flex items-center justify-center gap-1 font-mono text-[11px] text-fg-4 transition-colors duration-200 ease-out group-hover:text-purple-300">
+                        <ExternalLink className="size-3" aria-hidden />
+                        Ver diploma em tamanho real
                       </span>
-                    ) : null}
-                    {item.diplomaHref && diplomaDisponivel ? (
-                      <a
-                        href={item.diplomaHref}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-1 inline-flex w-fit items-center gap-1 font-mono text-xs text-fg-4 no-underline transition-colors duration-200 ease-out hover:text-purple-300 hover:no-underline"
-                      >
-                        <ExternalLink className="size-3.5" aria-hidden />
-                        Ver diploma
-                      </a>
-                    ) : null}
-                  </div>
+                    </a>
+                  ) : null}
                 </div>
               ))}
             </div>

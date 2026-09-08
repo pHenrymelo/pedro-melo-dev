@@ -32,7 +32,7 @@ function clientIp(request: Request) {
 export async function POST(request: Request) {
   if (isRateLimited(clientIp(request))) {
     return Response.json(
-      { error: "Muitas mensagens seguidas. Tente de novo em um minuto." },
+      { error: "Muitas mensagens seguidas. Tente novamente em um minuto." },
       { status: 429 },
     );
   }
@@ -55,7 +55,7 @@ export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
 
-    console.error("RESEND_API_KEY não configurada — mensagem não enviada.");
+    console.error("RESEND_API_KEY não configurada: mensagem não enviada.");
     return Response.json(
       { error: "Canal de email indisponível no momento." },
       { status: 503 },
@@ -69,18 +69,18 @@ export async function POST(request: Request) {
       from: FROM,
       to: [TO],
       replyTo: email,
-      subject: `Portfolio — mensagem de ${name}`,
+      subject: `Portfolio: mensagem de ${name}`,
       text: `Nome: ${name}\nEmail: ${email}\n\n${message}`,
     });
 
     if (error) {
       console.error("Resend recusou o envio:", error);
-      return Response.json({ error: "Não consegui enviar sua mensagem." }, { status: 502 });
+      return Response.json({ error: "Não foi possível enviar sua mensagem." }, { status: 502 });
     }
 
     return Response.json({ ok: true });
   } catch (cause) {
     console.error("Falha ao enviar email:", cause);
-    return Response.json({ error: "Não consegui enviar sua mensagem." }, { status: 502 });
+    return Response.json({ error: "Não foi possível enviar sua mensagem." }, { status: 502 });
   }
 }

@@ -31,7 +31,7 @@ export function KaiserHero({ hero }: { hero: KaiserContent["hero"] }) {
         </Reveal>
 
         <Reveal delay={120}>
-          <h1 className="hero-title-kaiser mx-auto mt-5 max-w-[16ch]">
+          <h1 className="hero-title-kaiser mx-auto mt-5 max-w-[20ch] text-center text-balance">
             {hero.headlineBefore}
             <span className="text-purple-400">{hero.headlineAccent}</span>
           </h1>

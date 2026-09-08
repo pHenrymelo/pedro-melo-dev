@@ -52,21 +52,26 @@ export function KaiserProjects({
                   <p className="text-sm leading-relaxed text-fg-3">{project.description}</p>
                 </div>
 
-                <div className="mt-auto flex items-center justify-between gap-3 border-t border-line-soft pt-4">
-                  <div className="flex flex-wrap gap-1.5">
+                <div className="mt-auto flex items-start justify-between gap-3 border-t border-line-soft pt-4">
+                  <div className="flex min-h-14 flex-wrap content-start gap-1.5">
                     {project.tags.map((tag) => (
                       <Tag key={tag}>{tag}</Tag>
                     ))}
                   </div>
-                  <a
-                    href={project.repo.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex shrink-0 items-center gap-1 rounded-sm px-1.5 py-1 font-mono text-xs text-fg-4 no-underline transition-colors duration-200 ease-out hover:text-purple-300 hover:no-underline"
-                  >
-                    <Icon name="github" className="size-3.5" />
-                    {project.repo.label}
-                  </a>
+                  {project.repo ? (
+                    <a
+                      href={project.repo.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex shrink-0 items-center gap-1 rounded-sm px-1.5 py-1 font-mono text-xs text-fg-4 no-underline transition-colors duration-200 ease-out hover:text-purple-300 hover:no-underline"
+                    >
+                      <Icon
+                        name={project.repo.href.includes("github.com") ? "github" : "external-link"}
+                        className="size-3.5"
+                      />
+                      {project.repo.label}
+                    </a>
+                  ) : null}
                 </div>
               </article>
             </Reveal>

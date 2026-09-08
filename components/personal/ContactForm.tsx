@@ -53,7 +53,7 @@ export function ContactForm({ form }: { form: PersonalContent["contact"]["form"]
         const body = (await response.json().catch(() => null)) as { error?: string } | null;
         setState({
           status: "error",
-          message: body?.error ?? "Não consegui enviar. Tente pelo email.",
+          message: body?.error ?? "Não foi possível enviar. Tente pelo email.",
         });
         return;
       }
@@ -120,7 +120,7 @@ export function ContactForm({ form }: { form: PersonalContent["contact"]["form"]
               <TriangleAlert className="size-3.5" aria-hidden />
               {state.message}{" "}
               <a href={form.fallbackHref} className="underline">
-                escreva direto por email
+                escreva diretamente por email
               </a>
             </span>
           )}

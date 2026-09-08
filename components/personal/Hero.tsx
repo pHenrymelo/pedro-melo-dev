@@ -58,10 +58,10 @@ export function Hero({ hero, cvDisponivel }: { hero: PersonalContent["hero"]; cv
               <Image
                 src={hero.avatar.src}
                 alt={hero.avatar.alt}
-                width={160}
-                height={160}
+                width={208}
+                height={208}
                 priority
-                className="size-40 rounded-full border-[3px] border-purple-500/50 object-cover shadow-[0_0_0_6px_rgba(130,87,230,0.10),0_8px_32px_rgba(130,87,230,0.2)]"
+                className="size-40 rounded-full border-[3px] border-purple-500/50 object-cover shadow-[0_0_0_6px_rgba(130,87,230,0.10),0_8px_32px_rgba(130,87,230,0.2)] lg:size-52 lg:shadow-[0_0_0_8px_rgba(130,87,230,0.10),0_12px_40px_rgba(130,87,230,0.22)]"
               />
               <div className="text-center">
                 <span className="block text-base font-bold text-fg-1">{hero.profile.name}</span>

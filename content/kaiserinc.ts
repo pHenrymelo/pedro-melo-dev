@@ -4,7 +4,7 @@ export const kaiserinc = {
   meta: {
     title: "KaiserInc — Knowledge & Tech",
     description:
-      "KaiserInc — grupo pessoal de projetos colaborativos. Software que funciona, times pequenos, projetos reais.",
+      "KaiserInc: grupo pessoal de projetos colaborativos. Software que funciona, times pequenos, projetos reais.",
   },
 
   hero: {
@@ -12,7 +12,7 @@ export const kaiserinc = {
     headlineBefore: "Projetos reais. Times pequenos. ",
     headlineAccent: "Software que funciona.",
     subtitle:
-      "KaiserInc é um grupo pessoal de desenvolvimento onde coordeno projetos colaborativos com colegas, construo produtos próprios e aplico novas tecnologias em contextos reais.",
+      "A KaiserInc é um grupo pessoal de desenvolvimento no qual coordeno projetos colaborativos com colegas e construo produtos próprios usando novas tecnologias.",
     meta: [
       { icon: "user", text: "Coordenado por Pedro Melo" },
       { icon: "users", text: "Colaborativo" },
@@ -30,7 +30,7 @@ export const kaiserinc = {
     heading: {
       id: "sobre",
       eyebrow: "Sobre a KaiserInc",
-      title: "Não é uma empresa. É uma estrutura.",
+      title: "Não é uma empresa, é uma estrutura de trabalho.",
     },
     paragraphs: [
       [
@@ -42,10 +42,10 @@ export const kaiserinc = {
         ".",
       ],
       [
-        "Não tem CNPJ, não tem contrato, não tem marketing. Tem código, decisões técnicas e produtos que funcionam, feitos por pessoas que gostam de construir coisas juntas.",
+        "Não tem CNPJ, contrato nem marketing. Tem código, decisões técnicas e produtos que funcionam, feitos por pessoas que gostam de construir software em conjunto.",
       ],
       [
-        "Cada projeto é uma desculpa pra aprender fundo: arquitetura, deploy, testes, banco, integração, observabilidade. A mesma qualidade de um produto pago, numa escala que um time pequeno consegue manter.",
+        "Cada projeto é uma oportunidade de aprender a fundo: arquitetura, deploy, testes, banco de dados, integração e observabilidade. A mesma qualidade de um produto pago, numa escala que um time pequeno consegue manter.",
       ],
     ],
     principles: {
@@ -53,23 +53,23 @@ export const kaiserinc = {
       items: [
         {
           number: "01",
-          title: "Ship.",
-          text: "Produto rodando vale mais que slide bonito. Deploy primeiro, polimento depois.",
+          title: "Entregar.",
+          text: "Um produto rodando vale mais que uma apresentação. Primeiro o deploy, depois o polimento.",
         },
         {
           number: "02",
           title: "Times pequenos.",
-          text: "1–3 pessoas por projeto. Decisão rápida, contexto compartilhado.",
+          text: "De 1 a 3 pessoas por projeto. Decisões rápidas e contexto compartilhado.",
         },
         {
           number: "03",
           title: "Tecnologia certa.",
-          text: "Usar o que faz sentido para o problema — não a hype da semana.",
+          text: "Usar o que faz sentido para o problema, não a tendência do momento.",
         },
         {
           number: "04",
           title: "Aprender em público.",
-          text: "Repos abertos, decisões documentadas, falhas registradas.",
+          text: "Repositórios abertos, com decisões e falhas documentadas.",
         },
       ],
     },
@@ -81,18 +81,17 @@ export const kaiserinc = {
       eyebrow: "Projetos",
       title: "O que está sendo construído.",
       description:
-        "Seis repositórios públicos em diferentes estágios: de boilerplates prontos pra produção a produtos locais com usuários reais.",
+        "Seis projetos em diferentes estágios, de boilerplates prontos para produção a produtos com usuários reais.",
     },
     items: [
       {
-        icon: "smartphone",
+        icon: "rocket",
         status: "dev",
         statusLabel: "Em desenvolvimento",
-        title: "Handly",
+        title: "Levelify",
         description:
-          "App para conectar clientes e prestadores de serviço em Itapajé, CE. Backend em Rust, mobile em React Native.",
-        tags: ["React Native", "Rust", "TypeScript"],
-        repo: { label: "repo", href: "https://github.com/Kaiser-Inc/Handly-Mobile" },
+          "Sistema de gerenciamento de tarefas e hábitos com ferramentas de produtividade baseadas em IA e gamificação.",
+        tags: ["Next.js", "TypeScript", "React"],
       },
       {
         icon: "package",
@@ -100,7 +99,7 @@ export const kaiserinc = {
         statusLabel: "Disponível",
         title: "Kaiser Utils",
         description:
-          "Boilerplates de API prontos pra produção: Python/FastAPI, Node/Fastify e Rails 8.1. JWT, Clean Architecture, Docker multi-stage e OpenTelemetry.",
+          "Boilerplates de API prontos para produção: Python/FastAPI, Node/Fastify e Rails 8.1. JWT, Clean Architecture, Docker multi-stage e OpenTelemetry.",
         tags: ["TypeScript", "Python", "Ruby"],
         repo: { label: "repo", href: "https://github.com/Kaiser-Inc/Utils" },
       },
@@ -110,29 +109,28 @@ export const kaiserinc = {
         statusLabel: "Disponível",
         title: "Microservices Workshop",
         description:
-          "Projeto didático comparando monolito e microserviços na prática. A mesma feature dos dois jeitos, com Kong, RabbitMQ e OpenTelemetry.",
+          "Projeto didático que compara monolito e microserviços na prática: a mesma funcionalidade implementada das duas formas, com Kong, RabbitMQ e OpenTelemetry.",
         tags: ["Python", "FastAPI", "RabbitMQ"],
         repo: { label: "repo", href: "https://github.com/Kaiser-Inc/Microservices-Workshop" },
       },
       {
         icon: "bar-chart-2",
-        status: "dev",
-        statusLabel: "Em desenvolvimento",
+        status: "live",
+        statusLabel: "Em uso",
         title: "MetriK",
         description:
           "Dashboard de qualidade de código para Python. Visualiza complexidade ciclomática, cobertura de testes, score Pylint e métricas Halstead.",
         tags: ["Python", "Pytest", "HTML"],
-        repo: { label: "repo", href: "https://github.com/Kaiser-Inc/MetriK" },
+        repo: { label: "app", href: "https://metri-k.vercel.app" },
       },
       {
-        icon: "wind",
-        status: "live",
-        statusLabel: "Em uso",
-        title: "Atmus Dashboard",
-        description:
-          "Dashboard para visualizar dados de monitoramento de qualidade do ar, conectado a sensores em tempo real.",
-        tags: ["TypeScript", "React"],
-        repo: { label: "repo", href: "https://github.com/Kaiser-Inc/Atmus-Dashboard" },
+        icon: "graduation-cap",
+        status: "dev",
+        statusLabel: "Em desenvolvimento",
+        title: "Angel of The Dices",
+        description: "Sistema de gerenciamento de fichas de RPG.",
+        tags: ["React", "TypeScript"],
+        repo: { label: "app", href: "https://angel-of-the-dices.vercel.app" },
       },
       {
         icon: "layout-template",
@@ -140,7 +138,7 @@ export const kaiserinc = {
         statusLabel: "Em desenvolvimento",
         title: "Design System",
         description:
-          "Sistema de design do grupo KaiserInc: tokens, componentes React e documentação visual pra todos os projetos.",
+          "Sistema de design do grupo KaiserInc: tokens, componentes React e documentação visual para todos os projetos.",
         tags: ["TypeScript", "React", "Tailwind"],
         repo: { label: "repo", href: "https://github.com/Kaiser-Inc/Design-System" },
       },

@@ -39,8 +39,8 @@ export function Projects({ projects }: { projects: PersonalContent["projects"] }
                   <p className="text-sm leading-relaxed text-fg-3">{project.description}</p>
                 </div>
 
-                <div className="mt-auto flex items-center justify-between gap-3 border-t border-line-soft pt-4">
-                  <div className="flex flex-wrap gap-1.5">
+                <div className="mt-auto flex items-start justify-between gap-3 border-t border-line-soft pt-4">
+                  <div className="flex min-h-14 flex-wrap content-start gap-1.5">
                     {project.tags.map((tag) => (
                       <Tag key={tag.label} nda={"nda" in tag && tag.nda}>
                         {tag.label}
