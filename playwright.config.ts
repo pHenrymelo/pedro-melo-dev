@@ -1,9 +1,18 @@
+import { existsSync, readFileSync } from "node:fs";
 import { defineConfig, devices } from "@playwright/test";
 
-/**
- * Os testes sobem o próprio servidor. Rodar com `npm test`.
- * Precisa do navegador baixado uma vez: `npx playwright install chromium`.
- */
+function loadEnvLocal() {
+  if (!existsSync(".env.local")) return;
+  for (const line of readFileSync(".env.local", "utf-8").split("\n")) {
+    const match = /^([A-Z_][A-Z0-9_]*)=(.*)$/.exec(line.trim());
+    if (!match) continue;
+    const [, key, rawValue] = match;
+    const value = rawValue.replace(/^["']|["']$/g, "");
+    if (value && !(key in process.env)) process.env[key] = value;
+  }
+}
+loadEnvLocal();
+
 export default defineConfig({
   testDir: "./tests",
   fullyParallel: true,

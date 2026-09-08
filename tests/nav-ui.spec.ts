@@ -34,7 +34,6 @@ test.describe("navegação da página", () => {
     await page.emulateMedia({ reducedMotion: "reduce" });
     await page.goto("/");
 
-    // Sem animação, o conteúdo tem de estar visível mesmo antes de qualquer scroll.
     const opacity = await page.evaluate(() => {
       const el = document.querySelectorAll(".reveal");
       return getComputedStyle(el[el.length - 1]).opacity;

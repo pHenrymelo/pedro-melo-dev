@@ -18,7 +18,7 @@ export function Experience({ experience }: { experience: PersonalContent["experi
 
         <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-16">
           <Reveal>
-            {/* Linha vertical em degradê do roxo até a borda, como no protótipo. */}
+
             <ol className="relative m-0 list-none pl-6 before:absolute before:bottom-2 before:left-[7px] before:top-2 before:w-px before:bg-gradient-to-b before:from-purple-500 before:to-[var(--border-subtle)] before:content-['']">
               {experience.timeline.map((item) => (
                 <li key={`${item.title}-${item.org}`} className="relative pb-8 last:pb-0">

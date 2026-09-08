@@ -19,7 +19,7 @@ export function Contact({ contact }: { contact: PersonalContent["contact"] }) {
 
         <div className="grid items-start gap-6 lg:grid-cols-2">
           <Reveal>
-            {/* Um card só, com os itens separados por 2px, como no protótipo. */}
+
             <div className="grid gap-0.5 rounded-xl border border-line-soft bg-surface p-2">
               {contact.channels.map((channel) => {
                 const inner = (

@@ -7,8 +7,7 @@ import type { KaiserContent } from "@/content/types";
 export function KaiserHero({ hero }: { hero: KaiserContent["hero"] }) {
   return (
     <section aria-label="KaiserInc" className="relative overflow-hidden py-16 lg:py-24">
-      {/* Duas camadas do protótipo: os brilhos radiais e a grade pontilhada
-          recortada por máscara. Tudo CSS — nenhuma imagem de fundo. */}
+
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(ellipse_900px_600px_at_50%_0%,rgba(130,87,230,0.20),transparent_60%),radial-gradient(ellipse_600px_360px_at_20%_80%,rgba(64,32,144,0.16),transparent_60%)]"

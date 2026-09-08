@@ -29,8 +29,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    // data-scroll-behavior: no Next 16 é o que faz a troca de rota pular pro topo
-    // instantaneamente enquanto as âncoras internas continuam com scroll suave.
+
     <html
       lang="pt-BR"
       data-theme="dark"

@@ -1,9 +1,5 @@
 import type { PersonalContent } from "./types";
 
-/**
- * Portfólio pessoal — conteúdo transcrito de index.html do protótipo.
- * Editar aqui é o jeito de ajustar a página: nenhum texto vive no JSX.
- */
 export const personal = {
   meta: {
     title: "Pedro Melo — Software Engineer & Tech Lead",

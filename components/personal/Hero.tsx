@@ -30,8 +30,7 @@ export function Hero({ hero, cvDisponivel }: { hero: PersonalContent["hero"]; cv
                 {hero.primaryCta.label}
                 <ArrowRight className="size-4" aria-hidden />
               </LinkButton>
-              {/* Só aparece quando o PDF existe em public/ — link quebrado é pior
-                  que botão ausente. Basta adicionar o arquivo e ele volta. */}
+
               {cvDisponivel && (
                 <LinkButton href={hero.cvCta.href} variant="ghost" size="lg" download>
                   <Download className="size-4" aria-hidden />

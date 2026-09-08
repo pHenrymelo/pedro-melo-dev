@@ -3,12 +3,10 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/cn";
 import type { ProjectStatus, RichText, SectionHeading } from "@/content/types";
 
-/** Wrapper de largura máxima usado por todas as seções — .container do protótipo. */
 export function Container({ children, className }: { children: ReactNode; className?: string }) {
   return <div className={cn("mx-auto w-full max-w-[1200px] px-4 sm:px-6", className)}>{children}</div>;
 }
 
-/** Rótulo em caixa alta com o traço roxo à esquerda. */
 export function Eyebrow({ children, className }: { children: ReactNode; className?: string }) {
   return (
     <span
@@ -77,22 +75,15 @@ export function StatusPill({ status, children }: { status: ProjectStatus; childr
   );
 }
 
-/**
- * Renderiza um parágrafo do conteúdo, que vem como lista de trechos em vez de
- * HTML — assim o texto continua sendo dado puro, sem dangerouslySetInnerHTML.
- */
 export function Rich({ text }: { text: RichText }) {
   return (
     <>
       {text.map((segment, i) => {
         if (typeof segment === "string") return segment;
         if ("href" in segment) {
-          // Sublinhado e roxo mais claro: dentro de um parágrafo, cor sozinha
-          // não distingue o link (WCAG 1.4.1) e o roxo-500 fica em 4.22:1,
-          // abaixo do mínimo de 4.5:1 sobre o fundo escuro.
+
           const cls = "text-purple-400 underline underline-offset-[3px] hover:text-purple-300";
-          // Rota interna precisa virar <Link>: um <a> puro recarregaria a
-          // página inteira e quebraria a navegação client-side.
+
           if (segment.href.startsWith("/") && !segment.href.startsWith("//")) {
             return (
               <Link key={i} href={segment.href} className={cls}>

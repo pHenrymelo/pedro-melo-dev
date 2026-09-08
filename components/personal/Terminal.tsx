@@ -2,10 +2,6 @@ import type { PersonalContent } from "@/content/types";
 
 type TerminalData = PersonalContent["hero"]["terminal"];
 
-/**
- * Card decorativo do hero. Markup estático — o "cursor" é só CSS, sem JS.
- * aria-hidden porque o conteúdo repete o que já está no resto da página.
- */
 export function Terminal({ terminal }: { terminal: TerminalData }) {
   return (
     <div

@@ -24,8 +24,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  // Checado em tempo de build (a página é estática): se o currículo estiver em
-  // public/, o botão de download aparece; senão, some em vez de dar 404.
+
   const cvDisponivel = existsSync(join(process.cwd(), "public", "cv-pedro-melo.pdf"));
 
   return (

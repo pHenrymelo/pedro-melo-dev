@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 test.describe("navegação entre os portfólios", () => {
   test("troca de rota sem recarregar a página", async ({ page }) => {
     await page.goto("/");
-    // Marca a janela: se houver reload de verdade, a marca some.
+
     await page.evaluate(() => {
       (window as unknown as { __spa?: string }).__spa = "viva";
     });

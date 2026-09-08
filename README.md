@@ -1,77 +1,39 @@
-# Portfólio — Pedro Melo & KaiserInc
+<p align="center">
+  <img src=".github/readme-home.png" width="49%" alt="Portfólio de Pedro Melo" />
+  <img src=".github/readme-kaiser.png" width="49%" alt="Portfólio da KaiserInc" />
+</p>
 
-Dois portfólios em uma aplicação Next.js navegável client-side: `/` (Pedro Melo) e
-`/kaiserinc` (KaiserInc). Sem backend próprio — a única rota de servidor é o envio
-do formulário de contato.
+<p align="center">
+  <em>Personal portfolio for Pedro Melo (Software Engineer & Tech Lead) and KaiserInc, the personal dev group under which his side projects are built. Live demo coming soon.</em>
+</p>
 
-Portado do protótipo do Claude Design e conferido contra ele por estilo computado.
+---
 
-## Rodando
+# Pedro Melo & KaiserInc
 
-```bash
-npm install
-npm run dev
-```
+Sou Pedro Henrique Braga Melo, engenheiro de software e Tech Lead no GREat, com 5 anos de
+experiência entre projetos profissionais, acadêmicos e pessoais.
 
-Abre em <http://localhost:3000>.
+Meus projetos pessoais e colaborativos nascem sob a KaiserInc, meu grupo de desenvolvimento, onde
+coordeno iniciativas com colegas e construo produtos fora do expediente. Não é uma empresa: é uma
+estrutura para aprender fundo em cada projeto e manter a qualidade de um produto real na escala que
+um time pequeno consegue sustentar.
 
-```bash
-npm run build   # build de produção
-npm run lint    # eslint
-npm test        # Playwright (desktop + mobile) — sobe o servidor sozinho
-```
+Os dois portfólios, o meu e o da KaiserInc, compartilham o mesmo design system da KaiserInc: mesma
+paleta, tipografia e identidade visual.
 
-Os testes precisam do navegador baixado uma vez: `npx playwright install chromium`.
+## Neste portfólio
 
-## Variáveis de ambiente
+- **`/`**: minha trajetória. Tech Lead no GREat, projetos acadêmicos com UFC e Huawei, stack,
+  certificações e experiência.
+- **`/kaiserinc`**: a KaiserInc. Princípios do grupo e os projetos em andamento, de boilerplates de
+  produção a dashboards com dados reais.
 
-Copie `.env.example` para `.env.local`. Só `RESEND_API_KEY` é obrigatória, e apenas
-para o formulário funcionar — sem ela a rota responde 503 e o formulário mostra o
-erro, em vez de fingir que enviou.
+**Demo ao vivo:** em breve.
 
-## Como ajustar o site
+## Contato
 
-**Textos, projetos, experiências, stack, contatos** vivem em `content/`:
-
-| Arquivo | O que controla |
-| --- | --- |
-| `content/personal.ts` | tudo da página `/` |
-| `content/kaiserinc.ts` | tudo da página `/kaiserinc` |
-| `content/types.ts` | o formato desses dados |
-
-Nenhum componente carrega texto fixo. Adicionar um projeto é adicionar um objeto na
-lista; com o TypeScript em `strict`, esquecer um campo quebra o build em vez de
-sumir da página silenciosamente.
-
-**Cores, tipografia, espaçamento, sombras** vivem em `app/tokens.css`, que é a fonte
-de verdade do design. Mudar `--purple-500` ali repinta o site inteiro. O arquivo já
-traz um tema claro completo em `[data-theme="light"]`: para ligar um alternador
-depois, basta trocar esse atributo no `<html>` (definido em `app/layout.tsx`).
-
-`app/globals.css` faz a ponte desses tokens para os utilitários do Tailwind e é onde
-mora a tipografia base.
-
-**Currículo:** coloque o PDF em `public/cv-pedro-melo.pdf`. O botão "Download CV"
-aparece sozinho quando o arquivo existe e some quando não existe, para não deixar
-link quebrado.
-
-## Estrutura
-
-```
-app/            rotas, layout, estilos, rota do formulário
-components/
-  layout/       nav e rodapé (variam por rota)
-  ui/           primitivos compartilhados pelas duas páginas
-  personal/     seções de /
-  kaiser/       seções de /kaiserinc
-content/        todo o conteúdo, tipado
-hooks/          scroll-spy da navegação
-lib/            utilitários e schema do formulário
-tests/          Playwright
-```
-
-## Deploy
-
-Vercel, sem configuração extra: o framework é detectado sozinho. Cadastre
-`RESEND_API_KEY` (e `NEXT_PUBLIC_SITE_URL`, se houver domínio próprio) nas variáveis
-de ambiente do projeto. Cada push vira deploy; PRs ganham preview.
+- [github.com/pHenrymelo](https://github.com/pHenrymelo)
+- [linkedin.com/in/phenrymelo](https://www.linkedin.com/in/phenrymelo)
+- pedrohenriquebmelo25@gmail.com
+- [github.com/Kaiser-Inc](https://github.com/Kaiser-Inc)

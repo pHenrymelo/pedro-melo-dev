@@ -25,7 +25,6 @@ function classes(variant: Variant, size: Size, className?: string) {
   return cn(base, variants[variant], sizes[size], className);
 }
 
-/** Decide entre <Link> (rota interna) e <a> (link externo, mailto, tel, arquivo). */
 function isInternal(href: string) {
   return href.startsWith("/") && !href.startsWith("//") && !href.includes(".");
 }
@@ -37,10 +36,6 @@ interface LinkButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   children: ReactNode;
 }
 
-/**
- * Botão em forma de link. Rotas internas viram <Link> para a navegação
- * client-side — é o que mantém a troca entre os dois portfólios sem reload.
- */
 export function LinkButton({
   href,
   variant = "primary",

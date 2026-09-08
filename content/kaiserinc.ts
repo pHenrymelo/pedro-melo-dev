@@ -1,8 +1,5 @@
 import type { KaiserContent } from "./types";
 
-/**
- * Portfólio da KaiserInc — conteúdo transcrito de kaiserinc.html do protótipo.
- */
 export const kaiserinc = {
   meta: {
     title: "KaiserInc — Knowledge & Tech",

@@ -84,27 +84,32 @@ test.describe("formulário de contato", () => {
   });
 });
 
+function ipDeTeste() {
+  return `203.0.113.${Math.floor(Math.random() * 250) + 1}`;
+}
+
 test.describe("rota /api/contact", () => {
   test("rejeita payload inválido", async ({ request }) => {
     const r = await request.post("/api/contact", {
       data: { name: "a", email: "nao-eh-email", message: "curto" },
+      headers: { "x-forwarded-for": ipDeTeste() },
     });
     expect(r.status()).toBe(400);
   });
 
   test("rejeita método não suportado", async ({ request }) => {
-    expect((await request.get("/api/contact")).status()).toBe(405);
+    const r = await request.get("/api/contact", {
+      headers: { "x-forwarded-for": ipDeTeste() },
+    });
+    expect(r.status()).toBe(405);
   });
 
   test("falha alto quando não há chave configurada", async ({ request }) => {
     test.skip(!!process.env.RESEND_API_KEY, "há chave configurada — o envio é real");
 
-    // O protótipo respondia "Mensagem registrada" e descartava o texto.
-    // Aqui a ausência de canal precisa aparecer como erro, não como sucesso.
-    // IP próprio: o rate limit é por IP e os projetos rodam em paralelo.
     const r = await request.post("/api/contact", {
       data: VALIDA,
-      headers: { "x-forwarded-for": `203.0.113.${Math.floor(Math.random() * 250) + 1}` },
+      headers: { "x-forwarded-for": ipDeTeste() },
     });
     expect(r.status()).toBe(503);
     expect((await r.json()).ok).toBeUndefined();

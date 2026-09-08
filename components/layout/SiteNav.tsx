@@ -36,9 +36,6 @@ export function SiteNav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuId = useId();
 
-  // Fecha o menu ao trocar de rota, senão ele fica aberto sobre a página nova.
-  // Ajuste durante o render (padrão do React para estado derivado de props) em
-  // vez de um efeito: evita o render extra com o menu ainda aberto na rota nova.
   const [lastPathname, setLastPathname] = useState(pathname);
   if (pathname !== lastPathname) {
     setLastPathname(pathname);
@@ -59,7 +56,7 @@ export function SiteNav() {
       <a
         href={`#${anchor.id}`}
         onClick={onNavigate}
-        // Marca a seção em foco para leitores de tela, não só visualmente.
+
         aria-current={activeId === anchor.id ? "true" : undefined}
         className={cn(
           "inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium no-underline",
@@ -154,8 +151,6 @@ export function SiteNav() {
         </div>
       </div>
 
-      {/* O protótipo simplesmente escondia a navegação abaixo de 960px; aqui ela
-          continua acessível por um menu recolhível. */}
       <div
         id={menuId}
         hidden={!menuOpen}

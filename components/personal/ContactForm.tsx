@@ -27,8 +27,7 @@ export function ContactForm({ form }: { form: PersonalContent["contact"]["form"]
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    // Guardado agora: depois do await o React já zerou event.currentTarget, e
-    // usá-lo lá embaixo lançaria — fazendo o envio bem-sucedido cair no catch.
+
     const formEl = event.currentTarget;
     const data = Object.fromEntries(new FormData(formEl));
 
@@ -108,7 +107,7 @@ export function ContactForm({ form }: { form: PersonalContent["contact"]["form"]
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-4">
-        {/* aria-live: leitores de tela anunciam o resultado sem precisar mover o foco. */}
+
         <p aria-live="polite" className="flex min-h-5 items-center gap-1.5 text-xs">
           {state.status === "sent" && (
             <span className="inline-flex items-center gap-1.5 text-success-fg">

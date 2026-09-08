@@ -2,15 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-/**
- * Marca qual seção está em foco durante o scroll, reproduzindo o segundo
- * IntersectionObserver do protótipo.
- *
- * A dependência é a lista serializada, não o array: quem chama costuma montar
- * o array em tempo de render, e depender da identidade dele faria o efeito
- * desconectar e recriar o observer a cada render — o observer nunca chegaria a
- * observar uma mudança e a seção ativa travaria na primeira.
- */
 export function useScrollSpy(sectionIds: readonly string[]): string | null {
   const [activeId, setActiveId] = useState<string | null>(null);
   const key = sectionIds.join(",");
@@ -25,7 +16,6 @@ export function useScrollSpy(sectionIds: readonly string[]): string | null {
 
     if (elements.length === 0) return;
 
-    // Faixa estreita a 40–45% da viewport: a seção que cruza esse ponto é a ativa.
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {

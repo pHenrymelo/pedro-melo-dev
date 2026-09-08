@@ -33,7 +33,6 @@ export function KaiserTeaser({ teaser }: { teaser: PersonalContent["kaiserTeaser
                 </div>
               </div>
 
-              {/* Vitrine do logo: gradiente radial + grade pontilhada recortada. */}
               <div
                 aria-hidden
                 className="relative mx-auto grid aspect-square w-full max-w-[240px] place-items-center overflow-hidden rounded-xl border border-line-soft bg-[radial-gradient(circle_at_50%_30%,rgba(130,87,230,0.32),transparent_60%),linear-gradient(135deg,var(--gray-900),var(--gray-950))] lg:ml-auto lg:mr-0 lg:max-w-[320px]"

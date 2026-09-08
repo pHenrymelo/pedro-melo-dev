@@ -1,10 +1,5 @@
-/**
- * Tipos do conteúdo do site. Tudo que aparece na tela mora em content/*.ts —
- * nenhum componente carrega texto hardcoded. Com `strict` ligado, esquecer um
- * campo quebra o build em vez de sumir silenciosamente da página.
- */
 
-/** Nome de um ícone registrado em components/ui/Icon.tsx. */
+
 export type IconName =
   | "github"
   | "linkedin"
@@ -28,10 +23,6 @@ export type IconName =
   | "calendar"
   | "external-link";
 
-/**
- * Parágrafo com trechos formatados. Mantém o conteúdo como dado puro (sem JSX),
- * então continua serializável e fácil de migrar pra um CMS depois.
- */
 export type RichSegment =
   | string
   | { text: string; strong: true }
@@ -46,7 +37,7 @@ export interface Link {
 }
 
 export interface MetaItem {
-  /** Sem ícone, renderiza o ponto verde pulsante de "disponível". */
+
   readonly icon?: IconName;
   readonly text: string;
 }
@@ -60,7 +51,7 @@ export interface ContactChannel {
   readonly icon: IconName;
   readonly label: string;
   readonly value: string;
-  /** Ausente = item informativo, não clicável (ex: localização). */
+
   readonly href?: string;
 }
 
@@ -74,18 +65,18 @@ export interface InfoRow {
 export interface StackGroup {
   readonly label: string;
   readonly hint: string;
-  /** Itens marcados como `brand` ganham destaque roxo. */
+
   readonly items: readonly { readonly name: string; readonly brand?: true }[];
 }
 
 export interface PersonalProject {
-  /** Monograma exibido no canto do card, ex: "G.". */
+
   readonly mark: string;
   readonly eyebrow: string;
   readonly title: string;
   readonly description: string;
   readonly tags: readonly { readonly label: string; readonly nda?: true }[];
-  /** Ausente = projeto privado, mostra o cadeado. */
+
   readonly repo?: Link;
 }
 
@@ -95,7 +86,7 @@ export interface TimelineItem {
   readonly org: string;
   readonly description: string;
   readonly tags: readonly string[];
-  /** Marca o ponto roxo pulsante de "em andamento". */
+
   readonly current?: true;
 }
 
@@ -188,7 +179,7 @@ export interface PersonalContent {
 
 export interface Stat {
   readonly value: string;
-  /** Sufixo em roxo, ex: o "+" de "02+". */
+
   readonly suffix?: string;
   readonly label: string;
 }

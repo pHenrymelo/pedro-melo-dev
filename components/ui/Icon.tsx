@@ -25,10 +25,6 @@ import type { IconName } from "@/content/types";
 
 type SvgProps = SVGProps<SVGSVGElement>;
 
-/**
- * lucide-react não distribui ícones de marca — o protótipo contornava isso com
- * máscara CSS. Aqui eles entram como SVG local, com a mesma API dos demais.
- */
 function GithubIcon(props: SvgProps) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>
@@ -73,7 +69,6 @@ interface IconProps extends SvgProps {
   name: IconName;
 }
 
-/** Resolve um IconName do conteúdo para o componente SVG correspondente. */
 export function Icon({ name, ...props }: IconProps) {
   const Component = registry[name];
   return <Component aria-hidden {...props} />;
